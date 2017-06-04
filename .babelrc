@@ -1,0 +1,14 @@
+{
+    "presets": ["env"],
+    "moduleIds": true,
+    "moduleRoot": "",
+    "plugins": [
+        ["babel-root-import", {
+            "rootPathSuffix": "resources/js",
+            "rootPathPrefix": "@"
+        }],
+        ["transform-es2015-modules-amd", {
+            "noInterop": true
+        }]
+    ]
+}

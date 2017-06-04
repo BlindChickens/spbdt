@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="SmousProBetaDeluxeTycoon - Online Large Scale Fruit &amp; Veg.">
+    <meta name="author" content="JC Combrink">
+    <title>SmousProBetaDeluxeTycoon</title>
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+	
+<!--
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/iP(hone|od)|BlackBerry|IEMobile/i)) {
+           location.replace("http://m.cavemancafe.co.za");
+        }
+        if (navigator.userAgent.match(/Android (?=.*Mobile)/i)){
+           location.replace("http://m.cavemancafe.co.za");
+        }
+    </script>
+-->
+</head>
+
+<body id="page-top" class="stop-scrolling scr" >
+    <script>
+        // Defer the loading of stylesheets to get the loading screen rendered asap.
+        (function () {
+            function loadStyleSheet(src) {
+                if (document.createStyleSheet) {
+                    document.createStyleSheet(src);
+                } else {
+                    var stylesheet = document.createElement('link');
+                    stylesheet.href = src;
+                    stylesheet.rel = 'stylesheet';
+                    stylesheet.type = 'text/css';
+                    document.getElementsByTagName('head')[0].appendChild(stylesheet);
+                }
+            }
+            loadStyleSheet("/resources/css/jquery-ui.min.css");
+            loadStyleSheet("/resources/css/bootstrap.min.css");
+            loadStyleSheet("/resources/css/fa.min.css");
+            loadStyleSheet("/resources/css/main.css");
+        })();
+    </script>
+    <script src="/resources/js/lib/tether.min.js"></script>
+    <script src="/resources/js/lib/knockout.min.js"></script>
+    <script src="/resources/js/lib/knockout.mapping.min.js"></script>
+    <script src="/resources/js/lib/jquery.min.js"></script>
+    <script src="/resources/js/lib/jquery-ui.min.js"></script>
+    <script src="/resources/js/lib/bootstrap.min.js"></script>
+    <script>
+        var require = {
+            baseUrl: './resources/js/',
+        }
+    </script>
+    <script src="/resources/js/lib/require.js"></script>
+    <script src="/resources/js/sp.js"></script>
+    <script type="text/html" id="template_LoginScreen">
+        <!-- include views/LoginScreen.html -->
+    </script>
+    <script type="text/html" id="template_IntroScreen">
+        <!-- include views/IntroScreen.html -->
+    </script>
+    <script type="text/html" id="template_RegisterScreen">
+        <!-- include views/RegisterScreen.html -->
+    </script>
+    <script>
+        $(document).ready(function() {
+            require(['main'], function (main) {
+                ko.applyBindings(view_model);
+                main.start();
+            });
+        });
+    </script>
+</body>
+</html>
