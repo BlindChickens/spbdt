@@ -48,17 +48,17 @@ run: ```python3 main.py```
 
 ## Solutions to errors:
 
-When you get ```/usr/bin/env: ‘node’: No such file or directory```:
+1.  When you get ```/usr/bin/env: ‘node’: No such file or directory```:
 
-run: ```sudo ln -s "$(which nodejs)" /usr/bin/node```
+    run: ```sudo ln -s "$(which nodejs)" /usr/bin/node```
 
 
-When trying to make a connection in pgAdmin3 and password authentication failed:
+2.  When trying to make a connection in pgAdmin3 and password authentication failed:
 
-run: ```sudo -u postgres psql```
+    run: ```sudo -u postgres psql```
 
-then type: ```\password```
+    then type: ```\password```
 
-then ```masterkey```
+    then ```masterkey```
 
-and again ```masterkey```
+    and again ```masterkey```
