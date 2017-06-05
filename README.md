@@ -1,5 +1,4 @@
-# spbdt
-Source files for SmousProBetaDeluxeTycoon
+# Source files for SmousProBetaDeluxeTycoon
 
 
 ## Requirements:
@@ -7,7 +6,7 @@ Source files for SmousProBetaDeluxeTycoon
 sudo apt-get update
 ```
 ```
-npm - sudo apt install npm
+npm - (sudo apt install npm)
 ```
 ```
 grunt-cli (npm install -g grunt-cli)
