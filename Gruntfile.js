@@ -44,28 +44,44 @@ module.exports = function(grunt) {
                 },
             },
         },
+        "less": {
+            dist: {
+                options: {
+                    strictMath: true,
+                },
+                files: {
+                    'temp/resources/css/spbdt.css': 'src/resources/css/spbdt.less',
+                },
+                // files: {
+                //     cwd: 'src/',
+                //     src: ['resources/css/spbdt.less'],
+                //     dest: 'temp/resources/css/spbdt.css',
+                // },
+            },
+        },
         // Copy the css and image resources
         "copy": {
             main: {
                 expand: true,
                 cwd: 'src',
-                src: ['resources/css/*', 'resources/fonts/*', '**/*.jpg', '**/*.png', '**/*.py', '**/*.svg'],
+                src: ['resources/fonts/*', '**/*.jpg', '**/*.png', '**/*.py', '**/*.svg'],
                 dest: 'spbdt_build/'
             },
             temp: {
                 expand: true,
                 cwd: 'temp',
-                src: ['**/*.js', '**/*.map'],
+                src: ['**/*.js', '**/*.map', '**/*.css'],
                 dest: 'spbdt_build/'
             },
         },
     });
     // Default task
-    grunt.registerTask('default', ['include_file', 'babel', 'concat', 'copy']);
+    grunt.registerTask('default', ['include_file', 'babel', 'concat', 'less', 'copy']);
 
     // Load up tasks
     // grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-include-file');
