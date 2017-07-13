@@ -64,7 +64,7 @@ module.exports = function(grunt) {
             main: {
                 expand: true,
                 cwd: 'src',
-                src: ['resources/fonts/*', '**/*.jpg', '**/*.png', '**/*.py', '**/*.svg'],
+                src: ['resources/fonts/*', 'resources/img/*', '**/*.py', 'resources/css/*'],
                 dest: 'spbdt_build/'
             },
             temp: {
