@@ -1,0 +1,59 @@
+/*variables*/
+    @gmGreen: #BCFFBA;
+
+/*mixins*/
+/*center children both directions*/
+.centreChildrenXY {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*center children horizontally*/
+.centreChildrenX {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+/*Default button style*/
+.btn {
+    margin: 10px;
+    width: 100px;
+    color: darkgreen;
+    font-size: 15px;
+    font-family:sans-serif;
+    font-weight: 400;
+}
+
+.btn:hover {
+    background-color: #BCFFBA;
+}
+
+/*Standard header for spdt*/
+.header {
+    a {
+        font-size: 20px;
+        margin: 10px;
+        margin-left: 0px;
+    }
+    .flag {
+        height: 100%;
+    }
+    .avatar {
+        height: 20px;
+        margin: 10px;
+    }
+}
+
+/*Standard footer for spdt*/
+.footer {
+    .centreChildrenX;
+    hr { 
+        width: 500px;
+    }
+    i {
+        color: @gmGreen;
+    }
+}
