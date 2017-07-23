@@ -1,6 +1,9 @@
 //require("load-grunt-tasks")(grunt); // npm install --save-dev load-grunt-tasks
 module.exports = function(grunt) {
     grunt.initConfig({
+        "clean":{
+            clean: ['temp', 'spbdt_build']
+        },
         // Include the screen HTML files in script tags in index.html
         "include_file": {
             default_options: {
@@ -76,13 +79,14 @@ module.exports = function(grunt) {
         },
     });
     // Default task
-    grunt.registerTask('default', ['include_file', 'babel', 'concat', 'less', 'copy']);
+    grunt.registerTask('default', ['clean', 'include_file', 'babel', 'concat', 'less', 'copy']);
 
     // Load up tasks
     // grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-include-file');
     grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-include-file');
 };
