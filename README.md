@@ -36,7 +36,7 @@ Password: masterkey
 ```
 If everything is installed cd to spbdt/src
 
-run: ```nmp install```
+run: ```npm install```
 
 And then run: ```grunt```
 

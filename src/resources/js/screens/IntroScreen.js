@@ -1,16 +1,17 @@
-import Screen from './Screen';
-import LoginScreen from './LoginScreen';
-import RegisterScreen from './RegisterScreen';
+import { Screen } from 'spa';
+// import LoginScreen from './LoginScreen';
+// import RegisterScreen from './RegisterScreen';
 
 export default class IntroScreen extends Screen {
     constructor() {
         super();
     };
     onLogin() {
-        new LoginScreen().open();
+        console.log('DAARSY');
+        // new LoginScreen().open();
     };
     onRegister() {
-        new RegisterScreen({ fullscreen: false }).open();
+        // new RegisterScreen({ fullscreen: false }).open();
     };
 };
 

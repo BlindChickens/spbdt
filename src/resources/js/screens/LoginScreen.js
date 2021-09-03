@@ -1,6 +1,5 @@
-import Screen from './Screen';
-
-export default class LoginScreen extends Screen {
+import KScreen from '../scripty';
+export default class LoginScreen extends KScreen {
     constructor() {
         super();
         this.nname = ko.observable('Jacques');

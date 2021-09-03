@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 sourceMap: true,
                 getModuleId: function(x) {return x.replace(/^\/src\/resources\/js/, '.')},
                 babelrc: true,
-                ignore: ['resources/js/lib/','resources/js/extend/']
+                ignore: ['resources/js/lib/','resources/js/extend/', 'resources/js/spa.js']
             },
             files: {
                 expand: true,
@@ -34,11 +34,8 @@ module.exports = function(grunt) {
             dev: {
                 src: [
                     'src/resources/js/extend/*.js',
-                    'temp/resources/js/SPBDT/SPBDT.js',
                     'temp/resources/js/SPBDT/backend.js',
                     'temp/resources/js/screens/*.js',
-                    'temp/resources/js/knockout/bindings/*.js',
-                    'temp/resources/js/knockout/bindinghandlers.js',
                     'temp/resources/js/main.js',
                 ],
                 dest: 'temp/resources/js/sp.js',
